@@ -30,11 +30,11 @@ const FormSignIn: FC<SignPageProps> = ({  }) => {
   return (
     <div className='w-full h-screen'>
         <div className="flex min-h-full flex-1 flex-col justify-center p-6 py-12 lg:px-8">
-            <div className='sm:mx-auto sm:w-full sm:max-w-sm border p-8 rounded-lg shadow-lg'>
+            <div className='sm:mx-auto sm:w-full sm:max-w-md border p-8 rounded-lg shadow-lg'>
                 <h2 className='mt-5 text-center text-2xl font-bold tracking-tight text-gray-900'>
                     Sign In Page
                 </h2>
-            <div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
+            <div className='mt-10 sm:mx-auto sm:w-full sm:max-w-md'>
                 <form action={formAction}>
                     <Input type='email' name='email' placeholder='Email' className='mb-4'/>
                     <Input type='password' name="password" placeholder='Password' className='mb-4'/>
