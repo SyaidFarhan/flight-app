@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import {Inter } from "next/font/google";
 import "../../globals.css";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Plane, PlaneIcon } from "lucide-react";
+
 
 const inter = Inter({subsets : ['latin']   })
 export const metadata: Metadata = {
@@ -17,8 +21,36 @@ export default function DashboardLayout({
     <html lang="en">
       <body
       className={inter.className}
-      > Layout
-        {children}
+      > 
+      <section>
+        <nav className="border-b border-muted p-5 ">
+          <div className="flex flex-row justify-between">
+            <span className="font-bold text-primary">fly app</span>
+
+          </div>
+
+        </nav>
+      </section>
+      <section className="flex flex-row gap-5 item-start flex-nowrap">
+        <section className="grow-0 w-[20%] h-screen shadow p-5 space-y-5 ">
+          <div className="space-y-2 border-2">
+            <Button variant={"ghost"} asChild className="w-full justify-start">
+              <Link href="/">Dashboard</Link>
+            </Button>
+          </div>
+                <div className="space-y-2 border-2">
+                  <div className="uppercase text-xs font-bold"> master data</div>
+            <Button variant={"ghost"} asChild className="w-full justify-start">
+              <Link href="/"> <PlaneIcon />
+              Air Plane</Link>
+            </Button>
+          </div>
+
+
+        </section>
+
+      </section>
+        
       </body>
     </html>
   );
